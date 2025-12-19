@@ -9,16 +9,24 @@ import path from 'path';
  * =============================================================================
  */
 
+const args = process.argv.slice(2);
+const isSingleMode = args.includes('--single');
+const argMonth = args.find(a => a.startsWith('--month='))?.split('=')[1];
+const argDay = args.find(a => a.startsWith('--day='))?.split('=')[1];
+
 const CONFIG = {
     // IMPORTANT: Inject ?mode=export to trigger Native Export Protocol
     baseUrl: 'http://localhost:5173',
-    outputDir: './dist/frozen_light',
+    outputDir: './dist/frozen_light/raw', // Unified Directory
     rawDir: './dist/frozen_light/raw',
     viewport: { width: 3840, height: 2160 },
-    daysPerMonth: [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
-    renderWait: 2500, // Slightly increased for safety
-    startMonth: 0,
-    endMonth: 11
+    // If Single Mode, override start/end to the specific target
+    startMonth: isSingleMode && argMonth ? parseInt(argMonth) : 0,
+    endMonth: isSingleMode && argMonth ? parseInt(argMonth) : 11,
+    // Days handled dynamically in loop, but for single we need to filter
+    targetDay: isSingleMode && argDay ? parseInt(argDay) : null,
+
+    renderWait: 2500, // Keep consistency
 };
 
 // Interactive Control State
@@ -74,8 +82,13 @@ async function generate() {
     console.log(`:: ENGINE B :: STARTED. Target: ${CONFIG.viewport.width}x${CONFIG.viewport.height} @ 3x DPI`);
 
     for (let m = CONFIG.startMonth; m <= CONFIG.endMonth; m++) {
-        const days = CONFIG.daysPerMonth[m];
-        for (let d = 1; d <= days; d++) {
+        const days = isSingleMode ? (CONFIG.targetDay || 1) : [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31][m];
+
+        // Loop range: In single mode, start=target, end=target. In batch, 1..days
+        const startD = isSingleMode ? (CONFIG.targetDay || 1) : 1;
+        const endD = isSingleMode ? (CONFIG.targetDay || 1) : days;
+
+        for (let d = startD; d <= endD; d++) {
             // Check Cancellation
             if (isCancelled) break;
 

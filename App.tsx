@@ -5,6 +5,7 @@ import { getAlmanacDataSync } from './services/geminiService';
 import { AlmanacEvent } from './types';
 import { soundEngine } from './services/soundEngine';
 import { FrozenLightHub } from './components/FrozenLightHub';
+import { DirectorControl, DirectorHandle } from './components/StudioX/DirectorControl'; // Studio X
 
 const App: React.FC = () => {
   // 1. 初始化日期：优先从 URL 读取 (?month=0&day=1)，否则默认为 2026-01-01
@@ -21,6 +22,11 @@ const App: React.FC = () => {
 
   // 使用同步方法直接初始化数据，避免首屏 null 状态
   const [eventData, setEventData] = useState<AlmanacEvent>(() => getAlmanacDataSync(currentDate));
+
+  // STUDIO X: Stage & Ambient Control
+  const stageRef = React.useRef<HTMLDivElement>(null);
+  const ambientRef = React.useRef<HTMLDivElement>(null);
+  const directorRef = React.useRef<DirectorHandle>(null);
 
   // 状态控制：导航锁与视觉过渡状态
   const [isNavigating, setIsNavigating] = useState<boolean>(false);
@@ -137,17 +143,25 @@ const App: React.FC = () => {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [navigateDay, isNavigating]);
 
+  // STUDIO X State
+  const [isCinematic, setIsCinematic] = useState(false);
+
   return (
     // CHANGED: overflow-hidden -> overflow-y-auto to allow scrolling on small vertical screens
     <div className="w-full h-screen flex flex-col items-center justify-center relative overflow-y-auto overflow-x-hidden">
 
       {/* Background Ambient Light */}
-      <div className="fixed top-1/2 left-full w-[800px] h-[800px] -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0"
-        style={{ background: 'radial-gradient(circle, rgba(240, 185, 11, 0.08) 0%, transparent 60%)' }}>
-      </div>
+      <div
+        ref={ambientRef}
+        className="fixed top-1/2 left-full w-[800px] h-[800px] -translate-x-1/2 -translate-y-1/2 pointer-events-none z-0 transition-opacity duration-1000"
+        style={{ background: 'radial-gradient(circle, rgba(240, 185, 11, 0.08) 0%, transparent 60%)' }}
+      />
 
       {/* Main Card Render */}
-      <div className="w-full flex justify-center transform transition-transform duration-500 z-10 shrink-0">
+      <div
+        ref={stageRef}
+        className="w-full flex justify-center z-10 shrink-0"
+      >
         <CrystalCard
           data={eventData}
           isTransitioning={isTransitioning}
@@ -157,14 +171,33 @@ const App: React.FC = () => {
         />
       </div>
 
-      {/* Context info - Added 'hide-on-capture' class */}
-      <div className="mt-8 mb-4 text-white/20 font-code text-[10px] tracking-[0.2em] uppercase z-0 pointer-events-none shrink-0 hide-on-capture">
-        SCROLL, KEYS or CLICK EDGES to NAVIGATE
-      </div>
+      {/* Context info - Controlled by React State now */}
+      {!isCinematic && (
+        <div className="mt-8 mb-4 text-white/20 font-code text-[10px] tracking-[0.2em] uppercase z-0 pointer-events-none shrink-0 transition-opacity duration-500">
+          SCROLL, KEYS or CLICK EDGES to NAVIGATE
+        </div>
+      )}
 
       {/* Project: Frozen Light Hub */}
       {/* The invisible trigger & dual engine controller */}
-      <FrozenLightHub currentMood={eventData.mood} />
+      <FrozenLightHub
+        currentMood={eventData.mood}
+        month={currentDate.getMonth()}
+        day={currentDate.getDate()}
+        onPlayCinematic={() => directorRef.current?.play()}
+      />
+
+      {/* STUDIO X: Director Mode (Headless) */}
+      {import.meta.env.DEV && (
+        <DirectorControl
+          ref={directorRef}
+          stageRef={stageRef}
+          ambientRef={ambientRef}
+          onNavigate={navigateDay}
+          onJump={handleJump}
+          onCinematicModeChange={setIsCinematic}
+        />
+      )}
     </div>
   );
 };

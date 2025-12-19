@@ -3,6 +3,8 @@
 
 > "In the crypto universe, time crystallizes into light."
 
+[**中文文档 (Chinese)**](./README_CN.md) | [**English**](./README.md)
+
 **Repository**: [https://github.com/ls569333469/binance-2026-almanac](https://github.com/ls569333469/binance-2026-almanac)
 
 A high-fidelity digital almanac collecting daily crypto history as luminous crystal cards, featuring **Neo-Chinese Futurism** aesthetics and **Swiss International Style** layouts.
@@ -60,6 +62,22 @@ npm run dev
 - **Vite**: Build Tool
 - **SVG**: Vector Graphics (Official Binance Logo Paths)
 - **TypeScript**: Type Safety
+- **Puppeteer**: Headless Rendering Engine
+
+## 📸 Project Frozen Light (Capture System)
+
+This project features a dual-engine capture system for generating high-fidelity assets.
+
+### 1. Optical Clone (Single Capture)
+- **Trigger**: Click the Camera icon (Control Capsule, bottom-right).
+- **Engine**: Server-side Puppeteer rendering (100% fidelity).
+- **Output**: Automatically downloads a 4K PNG to your device.
+
+### 2. Batch Book Generator (Engine B)
+- **Trigger**: Hover over Camera icon -> Click Gear (Settings) -> Click "START".
+- **Function**: Automatically traverses Jan 1 - Dec 31, rendering 4K screenshots for every day.
+- **Output**: Saved to `dist/frozen_light/raw/`. Useful for physical printing or archives.
+- **Note**: This process runs on the server (Node.js) and may take ~15-20 minutes for a full year loop.
 
 ## 📄 License
 

@@ -196,6 +196,9 @@ export const CrystalCard: React.FC<CrystalCardProps> = ({ data, isTransitioning,
       className={containerClass}
       style={exportStyles}
     >
+      {/* 
+        Original layout code continues...
+      */}
 
       {/* LEFT Navigation Zone - Added hide-on-capture */}
       <div

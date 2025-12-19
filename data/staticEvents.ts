@@ -20,7 +20,7 @@ export interface StaticEventContent {
 // 0. 哲学语录库 (The Philosophical Archive)
 // =============================================================================
 const PHILOSOPHICAL_QUOTES = [
-  "数理之中，自有万钧之力 (Vires in Numeris)。", 
+  "数理之中，自有万钧之力 (Vires in Numeris)。",
   "代码即律法，共识即疆域。",
   "不信言语，只验真伪 (Don't Trust. Verify)。",
   "数学无言，却道尽万物法则。",
@@ -56,10 +56,10 @@ const PHILOSOPHICAL_QUOTES = [
 const HISTORICAL_EVENTS: Record<string, StaticEventContent> = {
   // --- JANUARY ---
   "0-1": { tag: "2026 序章", title: "光之启幕", description: "2026年1月1日。欢迎来到“价值自由”的元年。所有的历史，皆为序章。", yearOfEvent: "2026", quote: "让金钱像信息一样自由流动 (Freedom of Money)。", mood: "GLORY" },
-  "0-2":  { tag: "社区文化", title: "Do 4", description: "2023年，CZ 发布推文强调 '4'：忽略 FUD、假新闻和攻击。", yearOfEvent: "2023", quote: "忽略杂音，专注建设 (Do 4)。" },
-  "0-3":  { tag: "起源时刻", title: "创世区块", description: "2009年，中本聪挖出了比特币的第一个区块（Block #0）。", yearOfEvent: "2009", quote: "泰晤士报头版：旧金融秩序的挽歌。", mood: "GLORY" },
-  "0-4":  { tag: "流量过载", title: "暂停注册", description: "2018年，因用户量激增，币安不得不暂停新用户注册进行系统升级。", yearOfEvent: "2018", quote: "拥堵，是变革的前奏。" },
-  "0-5":  { tag: "每日仪式", title: "Binance WODL", description: "2022年，Crypto WODL 游戏上线。知识科普与每日打卡仪式。", yearOfEvent: "2022", quote: "懂的人，自然懂。" },
+  "0-2": { tag: "社区文化", title: "Do 4", description: "2023年，CZ 发布推文强调 '4'：忽略 FUD、假新闻和攻击。", yearOfEvent: "2023", quote: "忽略杂音，专注建设 (Do 4)。" },
+  "0-3": { tag: "起源时刻", title: "创世区块", description: "2009年，中本聪挖出了比特币的第一个区块（Block #0）。", yearOfEvent: "2009", quote: "泰晤士报头版：旧金融秩序的挽歌。", mood: "GLORY" },
+  "0-4": { tag: "流量过载", title: "暂停注册", description: "2018年，因用户量激增，币安不得不暂停新用户注册进行系统升级。", yearOfEvent: "2018", quote: "拥堵，是变革的前奏。" },
+  "0-5": { tag: "每日仪式", title: "Binance WODL", description: "2022年，Crypto WODL 游戏上线。知识科普与每日打卡仪式。", yearOfEvent: "2022", quote: "懂的人，自然懂。" },
   "0-10": { tag: "社区力量", title: "Running Bitcoin", description: "2009年，Hal Finney 发布著名的 'Running bitcoin' 推文。", yearOfEvent: "2009", quote: "比特币，正如约运行 (Running bitcoin)。" },
   "0-11": { tag: "RWA 里程碑", title: "贝莱德 BUIDL", description: "2025年1月，贝莱德宣布其 BUIDL 基金支持 24/7 实时赎回 USDC。", yearOfEvent: "2025", quote: "华尔街的周末，被代码消灭了。", mood: "FUTURE" },
   "0-12": { tag: "首次转账", title: "第一笔交易", description: "2009年，中本聪向 Hal Finney 发送了 10 BTC。", yearOfEvent: "2009" },
@@ -70,17 +70,19 @@ const HISTORICAL_EVENTS: Record<string, StaticEventContent> = {
   "0-29": { tag: "名人效应", title: "Elon 修改简介", description: "2021年，Elon Musk 将 Twitter 简介改为 #Bitcoin。", yearOfEvent: "2021", quote: "回首往事，皆是必然。" },
 
   // --- FEBRUARY ---
-  "1-1":  { tag: "生态入口", title: "Web3 钱包", description: "2024年，币安 Web3 钱包正式上线铭文市场。", yearOfEvent: "2024", quote: "不仅是存储，更是通往未来的钥匙。" }, // Downgraded to GLORY
-  "1-8":  { tag: "行业名梗", title: "Funds are SAFU", description: "2018年，CZ 发推承诺 'All funds are safe'。", yearOfEvent: "2018", quote: "资金安然无恙 (Funds are SAFU)。" },
+  "1-1": { tag: "生态入口", title: "Web3 钱包", description: "2024年，币安 Web3 钱包正式上线铭文市场。", yearOfEvent: "2024", quote: "不仅是存储，更是通往未来的钥匙。" }, // Downgraded to GLORY
+  "1-8": { tag: "行业名梗", title: "Funds are SAFU", description: "2018年，CZ 发推承诺 'All funds are safe'。", yearOfEvent: "2018", quote: "资金安然无恙 (Funds are SAFU)。" },
   "1-10": { tag: "支付革命", title: "X 支付上线", description: "2025年2月，Elon Musk 的 X 平台正式集成加密支付功能。", yearOfEvent: "2025", quote: "万能应用，终于闭环。", mood: "FUTURE" },
-  "1-12": { tag: "黑天鹅", title: "3.12 暴跌", description: "2020年，受全球疫情恐慌影响，加密市场单日暴跌超 50%。", yearOfEvent: "2020", quote: "生存，乃唯一策略。", mood: "CRISIS" },
+  // Moved 3.12 to March section
+
   "1-14": { tag: "Layer 2", title: "Starknet 空投", description: "2024年，Starknet 进行大规模空投。", yearOfEvent: "2024" }, // Downgraded to GLORY
   "1-15": { tag: "品牌进化", title: "BNB Chain", description: "2022年，Binance Smart Chain (BSC) 正式更名为 BNB Chain。", yearOfEvent: "2022", quote: "超越币安，构建万物 (Build N Build)。" },
   "1-20": { tag: "去中心化", title: "Binance DEX", description: "2019年，Binance DEX 测试网正式上线。", yearOfEvent: "2019", quote: "不仅拥有财富，更掌权财富。" },
 
   // --- MARCH ---
-  "2-5":  { tag: "新起点", title: "Giggle Academy", description: "2024年，CZ 宣布启动教育项目 Giggle Academy。", yearOfEvent: "2024", quote: "让知识像空气一样自由流动。" }, // Downgraded to GLORY
+  "2-5": { tag: "新起点", title: "Giggle Academy", description: "2024年，CZ 宣布启动教育项目 Giggle Academy。", yearOfEvent: "2024", quote: "让知识像空气一样自由流动。" }, // Downgraded to GLORY
   "2-11": { tag: "国家战略", title: "比特币法案", description: "2025年3月，美国参议员引入《2025 比特币法案》。", yearOfEvent: "2025", quote: "数字黄金，并入国库。" },
+  "2-12": { tag: "黑天鹅", title: "3.12 暴跌", description: "2020年，受全球疫情恐慌影响，加密市场单日暴跌超 50%。", yearOfEvent: "2020", quote: "生存，乃唯一策略。", mood: "CRISIS" },
   "2-13": { tag: "技术升级", title: "Dencun 升级", description: "2024年，以太坊完成 Dencun 升级，引入 Blob 数据结构。", yearOfEvent: "2024", quote: "让扩展性不再是瓶颈。", mood: "FUTURE" },
   "2-15": { tag: "监管绿灯", title: "美债上链", description: "2025年3月，美国财政部发布指导意见，允许受监管实体在公链上发行国债代币。", yearOfEvent: "2025", quote: "国家信用的数字化。" },
   "2-18": { tag: "技术硬核", title: "Pascal 硬分叉", description: "2025年3月，BNB Chain 激活 Pascal 升级。", yearOfEvent: "2025", quote: "体验无感，技术有痕。", mood: "FUTURE" },
@@ -98,7 +100,7 @@ const HISTORICAL_EVENTS: Record<string, StaticEventContent> = {
   "3-30": { tag: "东方力量", title: "香港 ETF 上市", description: "2024年，博时、华夏等机构发行的比特币与以太坊现货 ETF 在香港交易所敲钟上市。", yearOfEvent: "2024", quote: "香江水暖，资本先行。" },
 
   // --- MAY ---
-  "4-8":  { tag: "铁三角", title: "何一 (He Yi)", description: "币安联合创始人何一，被社区尊称为“币安一姐”。", yearOfEvent: "CORE", quote: "用户至上，乃唯一信仰。" },
+  "4-8": { tag: "铁三角", title: "何一 (He Yi)", description: "币安联合创始人何一，被社区尊称为“币安一姐”。", yearOfEvent: "CORE", quote: "用户至上，乃唯一信仰。" },
   "4-12": { tag: "监管对话", title: "SEC 代币化圆桌", description: "2025年5月，SEC 举行'资产上链'圆桌会议。", yearOfEvent: "2025", quote: "对话取代了诉讼。" },
   "4-14": { tag: "监管风暴", title: "SEC 起诉", description: "2023年，SEC 宣布起诉币安及 CZ。", yearOfEvent: "2023", quote: "稳住，诸君 (Steady lads)。", mood: "CRISIS" },
   "4-17": { tag: "以太坊", title: "The DAO 攻击", description: "2016年，黑客利用重入漏洞从 The DAO 盗走 360 万 ETH。", yearOfEvent: "2016", mood: "CRISIS" },
@@ -107,7 +109,7 @@ const HISTORICAL_EVENTS: Record<string, StaticEventContent> = {
   "4-24": { tag: "Meme 永生", title: "Doge 陨落", description: "2024年，Doge 表情包原型 Kabosu 离世。", yearOfEvent: "2024", quote: "肉身虽陨，图腾永存 (Doge Forever)。" },
 
   // --- JUNE ---
-  "5-8":  { tag: "生态里程碑", title: "两亿用户", description: "2024年，币安宣布全球注册用户突破 2 亿。", yearOfEvent: "2024", quote: "两亿星火，已成燎原之势。" },
+  "5-8": { tag: "生态里程碑", title: "两亿用户", description: "2024年，币安宣布全球注册用户突破 2 亿。", yearOfEvent: "2024", quote: "两亿星火，已成燎原之势。" },
   "5-14": { tag: "诞生之日", title: "币安成立", description: "2017年，赵长鹏 (CZ) 与团队正式创立 Binance。", yearOfEvent: "2017", quote: "交易全世界 (Exchange the world)。", mood: "GLORY" },
   "5-15": { tag: "技术融合", title: "Beacon Chain Sunset", description: "2025年（预计），BNB Beacon Chain 完成最终日落。", yearOfEvent: "2025", quote: "双链归一，大道至简。", mood: "FUTURE" },
   "5-18": { tag: "法案落地", title: "MiCA 全面生效", description: "2025年中，欧盟 MiCA 法案预计全面落地。", yearOfEvent: "2025", quote: "在规则的框架内，翩以此舞。" },
@@ -122,8 +124,8 @@ const HISTORICAL_EVENTS: Record<string, StaticEventContent> = {
   "6-24": { tag: "多链互通", title: "Centrifuge V3", description: "2025年7月，RWA 协议 Centrifuge 发布 V3。", yearOfEvent: "2025", quote: "流动性无国界。" }, // Downgraded to GLORY
 
   // --- AUGUST ---
-  "7-4":  { tag: "历史转折", title: "9.4 监管", description: "2017年，中国发布《关于防范代币发行融资风险的公告》。币安果断决定'出海'。", yearOfEvent: "2017", quote: "危机，乃进化之契机。", mood: "CRISIS" },
-  "7-8":  { tag: "核心团队", title: "何一加入", description: "2017年8月8日，何一正式加入币安担任联合创始人兼 CMO。", yearOfEvent: "2017", quote: "重返战场，只为登顶。" },
+  "7-4": { tag: "历史转折", title: "9.4 监管", description: "2017年，中国发布《关于防范代币发行融资风险的公告》。币安果断决定'出海'。", yearOfEvent: "2017", quote: "危机，乃进化之契机。", mood: "CRISIS" },
+  "7-8": { tag: "核心团队", title: "何一加入", description: "2017年8月8日，何一正式加入币安担任联合创始人兼 CMO。", yearOfEvent: "2017", quote: "重返战场，只为登顶。" },
   "7-13": { tag: "产品里程碑", title: "合约上线", description: "2019年，Binance Futures 正式上线。", yearOfEvent: "2019" },
   "7-15": { tag: "硅基文明", title: "AI 代理支付", description: "2025年8月，首个完全由 AI Agent 自主管理的加密钱包完成了一笔跨链交易。", yearOfEvent: "2025", quote: "人类无需插手。", mood: "FUTURE" },
   "7-21": { tag: "主流化", title: "Coinbase 收录 WLFI", description: "2025年8月，WLFI 稳定币被列入 Coinbase 上币路线图。", yearOfEvent: "2025", quote: "权力与资本的链上共舞。" },
@@ -131,7 +133,7 @@ const HISTORICAL_EVENTS: Record<string, StaticEventContent> = {
   "7-25": { tag: "官方玩梗", title: "The Intern", description: "Binance Intern（实习生）账号是机构号人格化的典范。", yearOfEvent: "LIFE", quote: "Intern > CEO." },
 
   // --- SEPTEMBER ---
-  "8-1":  { tag: "DeFi 夏天", title: "BSC 上线", description: "2020年9月1日，Binance Smart Chain (BSC) 主网启动。", yearOfEvent: "2020", quote: "连接 CeFi 与 DeFi 的桥梁。" }, // Downgraded to GLORY
+  "8-1": { tag: "DeFi 夏天", title: "BSC 上线", description: "2020年9月1日，Binance Smart Chain (BSC) 主网启动。", yearOfEvent: "2020", quote: "连接 CeFi 与 DeFi 的桥梁。" }, // Downgraded to GLORY
   "8-10": { tag: "善意回响", title: "Giggle 的抉择", description: "2025年9月，面对社区 Meme 币向 Giggle Academy 的捐赠，CZ 展现了开放的态度。", yearOfEvent: "2025", quote: "善意不问出处。" },
   "8-13": { tag: "扩容方案", title: "opBNB 主网", description: "2023年，opBNB 主网正式上线。", yearOfEvent: "2023", quote: "速度，即是用户体验。" }, // Downgraded to GLORY
   "8-20": { tag: "高性能链", title: "Solana Firedancer", description: "2025年9月，Solana 新一代客户端 Firedancer 主网完整上线。", yearOfEvent: "2025", quote: "不仅是快，是瞬时。", mood: "FUTURE" },
@@ -144,19 +146,19 @@ const HISTORICAL_EVENTS: Record<string, StaticEventContent> = {
   "9-8": { tag: "科技向善", title: "Binance Charity", description: "2018年，币安慈善基金会成立。", yearOfEvent: "2018", quote: "善意上链，爱无损耗。" },
   "9-12": { tag: "社交进化", title: "Binance Square", description: "2022年，Binance Feed（后更名为 Square）上线。", yearOfEvent: "2022", quote: "从交易，到生活。" },
   "9-14": { tag: "巨头入局", title: "贝莱德自研", description: "2025年10月，CEO Larry Fink 透露贝莱德正在开发专有的资产代币化技术堆栈。", yearOfEvent: "2025", quote: "消除中介，直连价值。", mood: "FUTURE" },
-  "9-17":{ tag: "数据主权", title: "Greenfield", description: "2023年10月，BNB Greenfield 主网正式上线。", yearOfEvent: "2023", quote: "让数据回归所有者。", mood: "FUTURE" },
+  "9-17": { tag: "数据主权", title: "Greenfield", description: "2023年10月，BNB Greenfield 主网正式上线。", yearOfEvent: "2023", quote: "让数据回归所有者。", mood: "FUTURE" },
   "9-20": { tag: "文化官方化", title: "币安人生", description: "2025年10月，Binance Futures 上线 'Binance Life' 永续合约。", yearOfEvent: "2025", quote: "人生由我，币安相随 (Life is Binance)。" },
-  "9-21":{ tag: "新时代", title: "Richard Teng", description: "2023年，币安与美国监管达成和解，CZ 辞任 CEO，Richard Teng 接棒。", yearOfEvent: "2023", quote: "是时候翻开新的一页了。" }, // Downgraded to GLORY (Maturity, not Crisis)
+  "9-21": { tag: "新时代", title: "Richard Teng", description: "2023年，币安与美国监管达成和解，CZ 辞任 CEO，Richard Teng 接棒。", yearOfEvent: "2023", quote: "是时候翻开新的一页了。" }, // Downgraded to GLORY (Maturity, not Crisis)
   "9-28": { tag: "上市里程碑", title: "Securitize 上市", description: "2025年10月，RWA 龙头 Securitize 宣布通过 SPAC 方式上市。", yearOfEvent: "2025", quote: "代币化企业，登陆纳斯达克。" },
-  "9-30":{ tag: "全球峰会", title: "迪拜区块链周", description: "2024年10月，币安区块链周在迪拜举行。", yearOfEvent: "2024", quote: "动量所在，即是未来。" },
+  "9-30": { tag: "全球峰会", title: "迪拜区块链周", description: "2024年10月，币安区块链周在迪拜举行。", yearOfEvent: "2024", quote: "动量所在，即是未来。" },
 
   // --- NOVEMBER ---
   "10-4": { tag: "AI 进化", title: "Grok 钱包", description: "2025年11月，xAI 旗下的 Grok 3.0 模型发布，内置了非托管加密钱包。", yearOfEvent: "2025", quote: "硅基生命的第一笔私房钱。", mood: "FUTURE" },
   "10-6": { tag: "宏观转向", title: "政治觉醒", description: "2024年美国大选，加密选民首次成为关键力量。", yearOfEvent: "2024", quote: "选票，即另一种形式的共识。" },
   "10-8": { tag: "实体落地", title: "DePIN 爆发", description: "2025年11月，DePIN 网络覆盖设备突破 5000 万台。", yearOfEvent: "2025", quote: "代码构建网络，硬件连接世界。", mood: "FUTURE" },
-  "10-11":{ tag: "顶级掠食者", title: "MicroStrategy", description: "2024年，MicroStrategy 持续加仓。", yearOfEvent: "2024", quote: "这不是赌博，这是数学上的必然。" },
-  "10-12":{ tag: "创始人", title: "中本聪隐退", description: "2010年，中本聪发布了最后一个帖子后彻底消失。", yearOfEvent: "2010", quote: "火种已播，我将归隐。" },
-  "10-18":{ tag: "长期主义", title: "HODL", description: "2013年，GameKyuubi 在论坛醉酒发帖 'I AM HODLING'。", yearOfEvent: "2013", quote: "无论涨跌，我将坚守 (I AM HODLING)。" },
+  "10-11": { tag: "顶级掠食者", title: "MicroStrategy", description: "2024年，MicroStrategy 持续加仓。", yearOfEvent: "2024", quote: "这不是赌博，这是数学上的必然。" },
+  "10-12": { tag: "创始人", title: "中本聪隐退", description: "2010年，中本聪发布了最后一个帖子后彻底消失。", yearOfEvent: "2010", quote: "火种已播，我将归隐。" },
+  "10-18": { tag: "长期主义", title: "HODL", description: "2013年，GameKyuubi 在论坛醉酒发帖 'I AM HODLING'。", yearOfEvent: "2013", quote: "无论涨跌，我将坚守 (I AM HODLING)。" },
   "10-23": { tag: "技术路线", title: "Lean Ethereum", description: "2025年11月，Vitalik 确立了 'Lean Ethereum' 路线图。", yearOfEvent: "2025", quote: "做减法，是为了无限的加法。", mood: "FUTURE" },
 
   // --- DECEMBER ---
@@ -165,7 +167,7 @@ const HISTORICAL_EVENTS: Record<string, StaticEventContent> = {
   "11-4": { tag: "金融未来", title: "代币化超越 AI", description: "2025年12月，BlackRock CEO Larry Fink 预言：'资产代币化 (Tokenization) 的影响将超越 AI'。", yearOfEvent: "2025", quote: "万物皆可 Token。", mood: "FUTURE" },
   "11-5": { tag: "社区守护者", title: "Binance Angels", description: "12月5日是国际志愿者日。", yearOfEvent: "LIFE", quote: "因为热爱，所以守护。" },
   "11-15": { tag: "时代交接", title: "何一宣言", description: "2025年底，联席 CEO 何一发出霸气宣言：'CZ is history, I am the future'。", yearOfEvent: "2025", quote: "历史值得铭记，未来更可期。" },
-  "11-20":{ tag: "支付革命", title: "Binance Pay", description: "2025年（趋势），Binance Pay 在全球商户覆盖率突破新高。", yearOfEvent: "2025", quote: "支付，如呼吸般自然。" },
+  "11-20": { tag: "支付革命", title: "Binance Pay", description: "2025年（趋势），Binance Pay 在全球商户覆盖率突破新高。", yearOfEvent: "2025", quote: "支付，如呼吸般自然。" },
   "11-25": { tag: "终极里程碑", title: "3亿用户", description: "2025年12月，币安宣布全球用户突破 3 亿。", yearOfEvent: "2025", quote: "三百兆星光，汇聚成河。", mood: "GLORY" },
   "11-26": { tag: "能源革命", title: "特斯拉挖矿", description: "2025年底，特斯拉宣布其 Megapack 储能网络利用多余太阳能进行比特币挖矿。", yearOfEvent: "2025", quote: "能源货币化 (Monetizing Energy)。", mood: "FUTURE" },
   "11-30": { tag: "性能极致", title: "Fermi 硬分叉", description: "2025年底，BNB Chain 发布 Fermi 版本。", yearOfEvent: "2025", quote: "唯快不破。", mood: "FUTURE" }
@@ -226,7 +228,7 @@ const KNOWLEDGE_BASE: StaticEventContent[] = [
   { tag: "政治概念", title: "加密选民", description: "指在选举中根据候选人对加密货币态度进行投票的群体。", yearOfEvent: "CONCEPT", quote: "选票即共识。" },
   { tag: "用户体验", title: "Chain Abstraction", description: "链抽象：用户不再知道自己在用哪条链。", yearOfEvent: "CONCEPT", quote: "忘掉链，只看路。" },
   { tag: "金融哲学", title: "原子结算", description: "Atomic Settlement：交易即清算。", yearOfEvent: "CONCEPT", quote: "时间就是金钱，字面意义上。" },
-  
+
   // --- Legacy Basic Concepts ---
   { tag: "核心原理", title: "去中心化", description: "网络不由单一实体控制。", yearOfEvent: "CONCEPT" },
   { tag: "技术底层", title: "区块链", description: "一个只能追加、不可篡改的分布式账本。", yearOfEvent: "CONCEPT" },
@@ -256,7 +258,7 @@ export const getEventContent = (month: number, day: number): StaticEventContent 
     content = { ...HISTORICAL_EVENTS[key] };
   } else {
     // B. 知识库补全
-    const dayOfYear = month * 31 + day; 
+    const dayOfYear = month * 31 + day;
     const seed = dayOfYear * 137;
     const index = seed % KNOWLEDGE_BASE.length;
     content = { ...KNOWLEDGE_BASE[index] };
