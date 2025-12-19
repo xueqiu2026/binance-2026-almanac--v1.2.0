@@ -2,7 +2,8 @@
 
 > "在加密宇宙中，时间凝结为光。"
 
-**Repository**: [https://github.com/ls569333469/binance-2026-almanac](https://github.com/ls569333469/binance-2026-almanac)
+**Repository**: [https://github.com/xueqiu2026/binance-2026-almanac](https://github.com/xueqiu2026/binance-2026-almanac)
+**在线演示**: [https://xueqiu2026.github.io/binance-2026-almanac--v1.2.0/](https://xueqiu2026.github.io/binance-2026-almanac--v1.2.0/)
 
 一本基于 **新中式未来主义 (Neo-Chinese Futurism)** 美学与 **瑞士国际主义 (Swiss International Style)** 排版的高保真数字年鉴，将每日的加密历史凝练为璀璨的水晶卡片。
 

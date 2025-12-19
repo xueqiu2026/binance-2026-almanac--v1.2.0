@@ -16,6 +16,11 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
+  "homepage": "https://xueqiu2026.github.io/binance-2026-almanac--v1.2.0/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xueqiu2026/binance-2026-almanac.git"
+  },
   "devDependencies": {
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",

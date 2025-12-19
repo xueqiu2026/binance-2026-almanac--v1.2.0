@@ -5,7 +5,8 @@
 
 [**中文文档 (Chinese)**](./README_CN.md) | [**English**](./README.md)
 
-**Repository**: [https://github.com/ls569333469/binance-2026-almanac](https://github.com/ls569333469/binance-2026-almanac)
+**Repository**: [https://github.com/xueqiu2026/binance-2026-almanac](https://github.com/xueqiu2026/binance-2026-almanac)
+**Live Demo**: [https://xueqiu2026.github.io/binance-2026-almanac--v1.2.0/](https://xueqiu2026.github.io/binance-2026-almanac--v1.2.0/)
 
 A high-fidelity digital almanac collecting daily crypto history as luminous crystal cards, featuring **Neo-Chinese Futurism** aesthetics and **Swiss International Style** layouts.
 
